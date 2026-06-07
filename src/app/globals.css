@@ -1,0 +1,175 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════════════════
+   Design Tokens — Every color, spacing, and semantic value
+   ═══════════════════════════════════════════════════════════ */
+:root {
+  /* Backgrounds */
+  --bg: #07090F;
+  --surface: #0D1117;
+  --surface-2: #161B22;
+  --surface-3: #1C2128;
+
+  /* Borders */
+  --border: #21262D;
+  --border-hover: #30363D;
+  --border-focus: #6366F1;
+
+  /* Brand */
+  --indigo: #6366F1;
+  --indigo-hover: #818CF8;
+  --indigo-subtle: #1E1B4B;
+  --indigo-text: #A5B4FC;
+
+  /* Semantic */
+  --green: #10B981;
+  --green-subtle: #064E3B;
+  --amber: #F59E0B;
+  --amber-subtle: #78350F;
+  --red: #EF4444;
+  --red-subtle: #7F1D1D;
+
+  /* Text */
+  --text-primary: #F0F6FC;
+  --text-secondary: #8B949E;
+  --text-muted: #484F58;
+  --text-placeholder: #30363D;
+
+  /* shadcn overrides */
+  --background: var(--bg);
+  --foreground: var(--text-primary);
+  --card: var(--surface);
+  --card-foreground: var(--text-primary);
+  --popover: var(--surface);
+  --popover-foreground: var(--text-primary);
+  --primary: var(--indigo);
+  --primary-foreground: #FFFFFF;
+  --secondary: var(--surface-2);
+  --secondary-foreground: var(--text-primary);
+  --muted: var(--surface-2);
+  --muted-foreground: var(--text-secondary);
+  --accent: var(--surface-3);
+  --accent-foreground: var(--text-primary);
+  --destructive: var(--red);
+  --destructive-foreground: #FFFFFF;
+  --input: var(--surface-2);
+  --ring: var(--indigo);
+  --radius: 0.75rem;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Base Styles
+   ═══════════════════════════════════════════════════════════ */
+* {
+  border-color: var(--border);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-primary);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Custom Utility Classes
+   ═══════════════════════════════════════════════════════════ */
+.section-padding {
+  @apply py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto;
+}
+
+.glass-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #F0F6FC 0%, var(--text-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.indigo-glow {
+  box-shadow: 0 0 0 1px var(--indigo), 0 0 24px rgba(99, 102, 241, 0.15);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Custom Scrollbar (Webkit)
+   ═══════════════════════════════════════════════════════════ */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--surface-3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-hover);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Keyframe Animations
+   ═══════════════════════════════════════════════════════════ */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cursor-blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes terminal-line {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse-dot {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(0.85);
+  }
+}
+
+.animate-cursor-blink {
+  animation: cursor-blink 1s step-end infinite;
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+.animate-terminal-line {
+  animation: terminal-line 0.3s ease-out;
+}
+
+.animate-fade-up {
+  animation: fade-up 0.5s ease-out;
+}
