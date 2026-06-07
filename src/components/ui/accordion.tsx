@@ -16,7 +16,7 @@ interface AccordionProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode
 }
 
-function Accordion({ className, children, ...props }: AccordionProps) {
+function Accordion({ className, children, type, collapsible, ...props }: AccordionProps) {
   const [openValue, setOpenValue] = useState<string | null>(null)
 
   return (

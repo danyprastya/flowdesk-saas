@@ -9,14 +9,14 @@
    ═══════════════════════════════════════════════════════════ */
 :root {
   /* Backgrounds */
-  --bg: #07090F;
-  --surface: #0D1117;
-  --surface-2: #161B22;
-  --surface-3: #1C2128;
+  --bg: #0C0F19;
+  --surface: #141A29;
+  --surface-2: #1F273D;
+  --surface-3: #2A3452;
 
   /* Borders */
-  --border: #21262D;
-  --border-hover: #30363D;
+  --border: #2D3958;
+  --border-hover: #41517D;
   --border-focus: #6366F1;
 
   /* Brand */
@@ -34,10 +34,10 @@
   --red-subtle: #7F1D1D;
 
   /* Text */
-  --text-primary: #F0F6FC;
-  --text-secondary: #8B949E;
-  --text-muted: #484F58;
-  --text-placeholder: #30363D;
+  --text-primary: #FAFAFA;
+  --text-secondary: #D1D5DB;
+  --text-muted: #9CA3AF;
+  --text-placeholder: #6B7280;
 
   /* shadcn overrides mapped to our custom properties */
   --background: var(--bg);

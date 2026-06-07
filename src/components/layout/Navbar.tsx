@@ -11,6 +11,7 @@ import {
   SheetTitle,
 } from '@/components/ui/sheet'
 import { cn } from '@/lib/utils'
+import Logo from '@/components/ui-custom/Logo'
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -67,23 +68,14 @@ export default function Navbar() {
       className={cn(
         'fixed top-0 left-0 w-full z-50 transition-all duration-300 h-16 flex items-center',
         isScrolled
-          ? 'bg-[#07090F]/90 backdrop-blur-md border-b border-[var(--border)]'
+          ? 'bg-[var(--bg)]/90 backdrop-blur-md border-b border-[var(--border)]'
           : 'bg-transparent border-b border-transparent'
       )}
     >
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Left: Logo */}
-        <a href="#hero" className="flex items-center gap-2">
-          {/* Logo Mark: 2x2 grid */}
-          <div className="w-7 h-7 grid grid-cols-2 gap-0.5 rounded overflow-hidden">
-            <span style={{ backgroundColor: 'var(--indigo)' }} />
-            <span style={{ backgroundColor: 'var(--surface-3)' }} />
-            <span style={{ backgroundColor: 'var(--surface-3)' }} />
-            <span style={{ backgroundColor: 'var(--indigo)' }} />
-          </div>
-          <span className="font-semibold text-lg tracking-tight text-[var(--text-primary)]">
-            Flowdesk
-          </span>
+        <a href="#hero" className="flex items-center">
+          <Logo iconSize="md" showText={true} />
         </a>
 
         {/* Center: Nav Links (desktop) */}

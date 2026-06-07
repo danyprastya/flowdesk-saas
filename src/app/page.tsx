@@ -12,7 +12,7 @@ import DemoRequest from '@/components/sections/DemoRequest'
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-[#07090F] overflow-x-hidden font-sans">
+    <div className="flex flex-col min-h-screen bg-[var(--bg)] overflow-x-hidden font-sans">
       {/* Navigation */}
       <Navbar />
 

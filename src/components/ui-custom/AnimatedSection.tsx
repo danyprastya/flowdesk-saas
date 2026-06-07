@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 
@@ -17,10 +17,15 @@ export default function AnimatedSection({
   direction = 'up',
   className = '',
 }: AnimatedSectionProps) {
+  const [mounted, setMounted] = useState(false)
   const shouldReduceMotion = useReducedMotion()
   const { ref, isInView } = useScrollAnimation(0.15, true)
 
-  if (shouldReduceMotion) {
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (mounted && shouldReduceMotion) {
     return <div className={className}>{children}</div>
   }
 

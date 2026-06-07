@@ -1,6 +1,7 @@
 import React from 'react'
 import { Twitter, Github, Linkedin } from 'lucide-react'
 import { FOOTER } from '@/constants/content'
+import Logo from '@/components/ui-custom/Logo'
 
 export default function Footer() {
   return (
@@ -16,18 +17,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand Col */}
           <div className="lg:col-span-2 space-y-4">
-            <div className="flex items-center gap-2">
-              {/* Logo Mark: 2x2 grid */}
-              <div className="w-6 h-6 grid grid-cols-2 gap-0.5 rounded overflow-hidden">
-                <span style={{ backgroundColor: 'var(--indigo)' }} />
-                <span style={{ backgroundColor: 'var(--surface-3)' }} />
-                <span style={{ backgroundColor: 'var(--surface-3)' }} />
-                <span style={{ backgroundColor: 'var(--indigo)' }} />
-              </div>
-              <span className="font-semibold text-base tracking-tight text-[var(--text-primary)]">
-                {FOOTER.brand.name}
-              </span>
-            </div>
+            <Logo iconSize="sm" showText={true} />
             <p
               className="text-sm max-w-sm leading-relaxed"
               style={{ color: 'var(--text-secondary)' }}
