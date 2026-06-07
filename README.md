@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Flowdesk SaaS — AI-Powered Sprint Automation & Backlog Prioritization
 
-## Getting Started
+Flowdesk is a premium, modern AI-powered project management platform built specifically for high-velocity engineering teams. It integrates where you work (GitHub, Slack, Jira, Linear) to automate the administrative overhead of sprints, detect blockers in real-time, and surface DORA metrics that engineering leadership actually cares about.
 
-First, run the development server:
+---
+
+## 🚀 Key Features
+
+* **AI Backlog Prioritization**: Automatically analyzes backlog tasks against team velocity, dependency graphs, and business impact to rank tickets.
+* **Sprint Autopilot**: Suggests optimal sprint scopes based on historical capacity, PTO schedules, and cross-team dependencies.
+* **Real-time Blocker Detection**: Monitors Slack threads, PR activity, and Jira/GitHub updates to proactively surface roadblocks before daily standups.
+* **Velocity Intelligence**: Predicts delivery timelines and tracks cycle times with high accuracy using historical trends.
+* **Deep Integrations**: Syncs bi-directionally with GitHub, Slack, Notion, Jira, and Linear.
+* **Executive Dashboards**: Instantly generates clean, investor-ready engineering reports detailing throughput and DORA metrics.
+
+---
+
+## 🛠️ Technology Stack
+
+* **Framework**: Next.js 15+ (App Router)
+* **Language**: TypeScript
+* **Styling**: Tailwind CSS & Vanilla CSS Variables (Premium Light Theme)
+* **Components**: Radix UI (via `shadcn/ui`) & Lucide React Icons
+* **Animations**: Framer Motion for smooth scroll effects and micro-interactions
+
+---
+
+## 💻 Getting Started
+
+### Prerequisites
+
+* Node.js v18.0.0 or higher
+* npm / yarn / pnpm
+
+### Installation
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/danyprastya/flowdesk-saas.git
+cd flowdesk-saas
+npm install
+```
+
+### Running the Development Server
+
+Start the local server with hot-reloading:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Building for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create an optimized production bundle:
 
-## Learn More
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+To run the production build locally:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📁 Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```text
+├── public/                 # Static assets (logos, icons)
+├── src/
+│   ├── app/                # Next.js App Router (layout, globals, metadata)
+│   ├── components/
+│   │   ├── sections/       # Main landing page components (Hero, Features, Pricing, etc.)
+│   │   ├── ui/             # Reusable primitive UI elements (shadcn/ui primitives)
+│   │   └── ui-custom/      # Specialized custom components (TypingEffect, DashboardMockups)
+│   ├── constants/          # Static layout texts and feature descriptions
+│   └── hooks/              # Custom React hooks (scroll tracking, layout utilities)
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🤖 Agent-Assisted Development
+
+This repository contains instruction sets optimized for AI coding assistants:
+* **`AGENTS.md`**: Provides contextual guardrails, rules, and documentation pointers for Next.js and Tailwind API conventions.
+* **`CLAUDE.md`**: References rules in `AGENTS.md` for models that parse `CLAUDE.md` on startup.
+
+If you are using an AI agent to edit this repository, it will automatically consume these guidelines to ensure code compatibility and style consistency.
