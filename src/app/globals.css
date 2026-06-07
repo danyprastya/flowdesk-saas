@@ -15,8 +15,8 @@
   --surface-3: #323A55;
 
   /* Borders */
-  --border: #333C5D;
-  --border-hover: #4E5A87;
+  --border: rgba(51, 60, 93, 0.35);
+  --border-hover: rgba(78, 90, 135, 0.6);
   --border-focus: #6366F1;
 
   /* Brand */
