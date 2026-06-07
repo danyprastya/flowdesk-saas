@@ -87,9 +87,9 @@ export default function Pricing() {
                 className="h-full flex"
               >
                 <div
-                  className={`relative flex flex-col justify-between p-6 rounded-2xl transition-all duration-300 w-full h-full border ${
+                  className={`relative flex flex-col justify-between p-6 rounded-2xl transition-all duration-300 w-full h-full border premium-shadow ${
                     isPro
-                      ? 'border-2 border-[var(--indigo)] shadow-xl shadow-indigo-100 scale-[1.02] lg:scale-105 z-10'
+                      ? 'border-2 border-[var(--indigo)] scale-[1.02] lg:scale-105 z-10'
                       : 'hover:border-[var(--border-hover)]'
                   }`}
                   style={{

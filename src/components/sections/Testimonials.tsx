@@ -28,7 +28,7 @@ export default function Testimonials() {
               delay={index * 0.08}
             >
               <div
-                className="relative flex flex-col justify-between p-6 rounded-2xl border transition-all duration-300 hover:border-[var(--indigo)] hover:shadow-[0_0_20px_rgba(99,102,241,0.06)] h-full"
+                className="relative flex flex-col justify-between p-6 rounded-2xl border transition-all duration-300 hover:border-[var(--indigo)] premium-shadow h-full"
                 style={{
                   backgroundColor: 'var(--surface)',
                   borderColor: 'var(--border)',

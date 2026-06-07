@@ -49,7 +49,11 @@ export default function HowItWorks() {
                 key={step.number}
                 direction="up"
                 delay={index * 0.1}
-                className="relative flex flex-col items-center text-center space-y-5 group px-4 py-6 rounded-2xl border border-transparent hover:border-[var(--border)] hover:bg-[var(--surface-2)]/30 transition-all duration-300"
+                className="relative flex flex-col items-center text-center space-y-5 group px-4 py-6 rounded-2xl border premium-shadow transition-all duration-300 hover:border-[var(--indigo)]"
+                style={{
+                  backgroundColor: 'var(--surface)',
+                  borderColor: 'var(--border)',
+                }}
               >
                 {/* Step circle & Icon */}
                 <div className="relative z-10 flex items-center justify-center">

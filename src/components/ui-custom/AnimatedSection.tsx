@@ -9,6 +9,7 @@ interface AnimatedSectionProps {
   delay?: number
   direction?: 'up' | 'left' | 'right'
   className?: string
+  style?: React.CSSProperties
 }
 
 export default function AnimatedSection({
@@ -16,6 +17,7 @@ export default function AnimatedSection({
   delay = 0,
   direction = 'up',
   className = '',
+  style,
 }: AnimatedSectionProps) {
   const [mounted, setMounted] = useState(false)
   const shouldReduceMotion = useReducedMotion()
@@ -26,7 +28,7 @@ export default function AnimatedSection({
   }, [])
 
   if (mounted && shouldReduceMotion) {
-    return <div className={className}>{children}</div>
+    return <div className={className} style={style}>{children}</div>
   }
 
   const getVariants = () => {
@@ -62,6 +64,7 @@ export default function AnimatedSection({
         ease: [0.16, 1, 0.3, 1], // Custom cubic-bezier easeOut
       }}
       className={className}
+      style={style}
     >
       {children}
     </motion.div>

@@ -91,6 +91,11 @@ body {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 12px;
+  box-shadow: 0 24px 64px -12px rgba(79, 70, 229, 0.06), 0 8px 24px -8px rgba(79, 70, 229, 0.03);
+}
+
+.premium-shadow {
+  box-shadow: 0 24px 64px -12px rgba(79, 70, 229, 0.06), 0 8px 24px -8px rgba(79, 70, 229, 0.03);
 }
 
 .text-gradient {

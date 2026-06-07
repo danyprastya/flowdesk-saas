@@ -391,7 +391,7 @@ export default function DemoRequest() {
           {/* Trust badges strip */}
           <div className="grid grid-cols-3 gap-3">
             <div
-              className="p-3 border rounded-xl flex flex-col items-center justify-center text-center gap-1.5"
+              className="p-3 border rounded-xl flex flex-col items-center justify-center text-center gap-1.5 premium-shadow"
               style={{
                 backgroundColor: 'var(--surface)',
                 borderColor: 'var(--border)',
@@ -406,7 +406,7 @@ export default function DemoRequest() {
               </span>
             </div>
             <div
-              className="p-3 border rounded-xl flex flex-col items-center justify-center text-center gap-1.5"
+              className="p-3 border rounded-xl flex flex-col items-center justify-center text-center gap-1.5 premium-shadow"
               style={{
                 backgroundColor: 'var(--surface)',
                 borderColor: 'var(--border)',
@@ -421,7 +421,7 @@ export default function DemoRequest() {
               </span>
             </div>
             <div
-              className="p-3 border rounded-xl flex flex-col items-center justify-center text-center gap-1.5"
+              className="p-3 border rounded-xl flex flex-col items-center justify-center text-center gap-1.5 premium-shadow"
               style={{
                 backgroundColor: 'var(--surface)',
                 borderColor: 'var(--border)',
