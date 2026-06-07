@@ -56,7 +56,6 @@
   --accent-foreground: var(--text-primary);
   --destructive: var(--red);
   --destructive-foreground: #FFFFFF;
-  --border: var(--border);
   --input: var(--surface-2);
   --ring: var(--indigo);
   --radius: 0.75rem;
