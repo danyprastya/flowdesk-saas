@@ -37,7 +37,7 @@ export default function HowItWorks() {
         <div className="relative grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8 mt-16">
           {/* Horizontal connectors (desktop only) */}
           <div
-            className="hidden lg:block absolute top-[68px] left-[15%] right-[15%] h-0.5 border-t-2 border-dashed pointer-events-none"
+            className="hidden lg:block absolute top-[52px] left-[15%] right-[15%] h-0.5 border-t-2 border-dashed pointer-events-none"
             style={{ borderColor: 'var(--border)' }}
           />
 
@@ -51,14 +51,6 @@ export default function HowItWorks() {
                 delay={index * 0.1}
                 className="relative flex flex-col items-center text-center space-y-5 group px-4 py-6 rounded-2xl border border-transparent hover:border-[var(--border)] hover:bg-[var(--surface-2)]/30 transition-all duration-300"
               >
-                {/* Giant Watermark Step Number in Background */}
-                <span
-                  className="absolute top-2 left-1/2 -translate-x-1/2 -translate-y-4 text-8xl font-black font-mono select-none pointer-events-none opacity-[0.03] transition-opacity duration-300 group-hover:opacity-[0.05]"
-                  style={{ color: 'var(--text-primary)' }}
-                >
-                  {step.number}
-                </span>
-
                 {/* Step circle & Icon */}
                 <div className="relative z-10 flex items-center justify-center">
                   <div
@@ -103,27 +95,31 @@ export default function HowItWorks() {
                       {/* GitHub Node */}
                       <g transform="translate(8, 10)">
                         <rect width="40" height="40" rx="8" fill="var(--surface-3)" stroke="var(--border)" strokeWidth="1" />
-                        <path d="M20 28c-4.4 0-8-3.6-8-8 0-3.5 2.3-6.5 5.5-7.6.4-.1.5.2.5.4v1.4c-2.2.5-2.7-1.1-2.7-1.1-.4-.9-.9-1.1-.9-1.1-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.2 1.9.9 2.3.7.1-.5.3-.9.5-1.1-1.8-.2-3.6-.9-3.6-4 0-.9.3-1.6.8-2.2-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8.6-.2 1.3-.3 2-.3.7 0 1.4.1 2 .3 1.5-1 2.2-.8 2.2-.8.5 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.2 0 3.1-1.9 3.7-3.7 3.9.3.3.5.8.5 1.6v2.4c0 .2.1.5.6.4C29.7 21.5 32 18.5 32 15c0-4.4-3.6-8-8-8z" fill="var(--text-secondary)" />
+                        <g transform="translate(10, 10)">
+                          <path d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482C17.138 18.193 20 14.44 20 10.017 20 4.484 15.522 0 10 0z" fill="var(--text-primary)" />
+                        </g>
                       </g>
 
-                      {/* Center Flowdesk Node */}
+                      {/* Center Linear Node */}
                       <g transform="translate(60, 10)">
                         <rect width="40" height="40" rx="8" fill="var(--indigo-subtle)" stroke="var(--indigo)" strokeWidth="1" />
-                        <rect x="11" y="11" width="7" height="7" rx="1.5" fill="var(--indigo)" />
-                        <rect x="22" y="11" width="7" height="7" rx="1.5" fill="var(--border)" />
-                        <rect x="11" y="22" width="7" height="7" rx="1.5" fill="var(--border)" />
-                        <rect x="22" y="22" width="7" height="7" rx="1.5" fill="var(--indigo)" />
-                        {/* Glow dot */}
-                        <circle cx="20" cy="20" r="2.5" fill="var(--green)" />
+                        <g transform="translate(10, 10)">
+                          <path d="M10 0a10 10 0 1010 10A10 10 0 0010 0zm0 18a8 8 0 118-8 8 8 0 01-8 8z" fill="var(--indigo)" />
+                          <path d="M10 4a6 6 0 00-6 6h12a6 6 0 00-6-6z" fill="var(--indigo)" />
+                        </g>
                       </g>
 
                       {/* Slack Node */}
                       <g transform="translate(112, 10)">
                         <rect width="40" height="40" rx="8" fill="var(--surface-3)" stroke="var(--border)" strokeWidth="1" />
-                        <circle cx="20" cy="15" r="2" fill="#10B981" />
-                        <rect x="15" y="19" width="3" height="5" rx="1" fill="#F59E0B" />
-                        <rect x="22" y="19" width="3" height="5" rx="1" fill="#EF4444" />
-                        <circle cx="20" cy="25" r="2" fill="#6366F1" />
+                        <g transform="translate(10, 10)">
+                          <svg viewBox="0 0 24 24" width="20" height="20">
+                            <path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523 2.528 2.528 0 0 1-2.522-2.523 2.528 2.528 0 0 1 2.522-2.52h2.52v2.52zm1.261 0a2.528 2.528 0 0 1 2.52-2.52h5.043a2.528 2.528 0 0 1 2.522 2.52v5.042a2.528 2.528 0 0 1-2.522 2.52H8.823a2.528 2.528 0 0 1-2.52-2.52v-5.042z" fill="#36C5F0"/>
+                            <path d="M8.823 5.043a2.528 2.528 0 0 1-2.52-2.52 2.528 2.528 0 0 1 2.52-2.523 2.528 2.528 0 0 1 2.522 2.52v2.52h-2.522zm0 1.261a2.528 2.528 0 0 1 2.52 2.52v5.043a2.528 2.528 0 0 1-2.52 2.522H3.78a2.528 2.528 0 0 1-2.52-2.522V8.824a2.528 2.528 0 0 1 2.52-2.52h5.043z" fill="#2EB67D"/>
+                            <path d="M18.958 8.824a2.528 2.528 0 0 1 2.522-2.52 2.528 2.528 0 0 1 2.52 2.52 2.528 2.528 0 0 1-2.52 2.522h-2.522V8.824zm-1.261 0a2.528 2.528 0 0 1-2.52 2.52h-5.043a2.528 2.528 0 0 1-2.522-2.52V3.782a2.528 2.528 0 0 1 2.522-2.52h5.043a2.528 2.528 0 0 1 2.52 2.52v5.042z" fill="#ECB22E"/>
+                            <path d="M15.177 18.958a2.528 2.528 0 0 1 2.52 2.522 2.528 2.528 0 0 1-2.52 2.52 2.528 2.528 0 0 1-2.522-2.52v-2.522h2.522zm0-1.261a2.528 2.528 0 0 1-2.52-2.522v-5.043a2.528 2.528 0 0 1 2.52-2.52h5.043a2.528 2.528 0 0 1 2.522 2.52v5.043a2.528 2.528 0 0 1-2.522 2.52h-5.043z" fill="#E01E5A"/>
+                          </svg>
+                        </g>
                       </g>
                     </svg>
                   )}

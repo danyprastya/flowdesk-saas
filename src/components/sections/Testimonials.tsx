@@ -27,60 +27,65 @@ export default function Testimonials() {
               direction="up"
               delay={index * 0.08}
             >
-              <Card
-                className="glass-card flex flex-col h-full hover:border-[var(--border-hover)] transition-all duration-300"
+              <div
+                className="relative flex flex-col justify-between p-6 rounded-2xl border transition-all duration-300 hover:border-[var(--indigo)] hover:shadow-[0_0_20px_rgba(99,102,241,0.06)] h-full"
                 style={{
                   backgroundColor: 'var(--surface)',
                   borderColor: 'var(--border)',
                 }}
               >
-                <CardHeader className="p-6 pb-4 flex flex-row items-center justify-between gap-4 border-b border-[var(--border)]/40">
-                  <div className="flex items-center gap-3">
-                    {/* Initials Avatar */}
-                    <Avatar className="w-10 h-10 border border-[var(--border)]">
-                      <AvatarFallback
-                        className="font-semibold text-xs text-white"
-                        style={{ backgroundColor: 'var(--indigo)' }}
-                      >
-                        {testimonial.avatar}
-                      </AvatarFallback>
-                    </Avatar>
-                    {/* User credentials */}
-                    <div>
-                      <h4 className="text-sm font-semibold text-[var(--text-primary)]">
-                        {testimonial.name}
-                      </h4>
-                      <p
-                        className="text-[11px] mt-0.5"
-                        style={{ color: 'var(--text-secondary)' }}
-                      >
-                        {testimonial.role} at {testimonial.company}
-                      </p>
+                <div className="space-y-4">
+                  {/* Header: User Profile & Stars */}
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="flex items-center gap-3">
+                      {/* Initials Avatar */}
+                      <Avatar className="w-10 h-10 border border-[var(--border)] flex items-center justify-center rounded-full">
+                        <AvatarFallback
+                          className="font-semibold text-xs text-white w-full h-full flex items-center justify-center rounded-full"
+                          style={{ backgroundColor: 'var(--indigo)' }}
+                        >
+                          {testimonial.avatar}
+                        </AvatarFallback>
+                      </Avatar>
+                      {/* User credentials */}
+                      <div>
+                        <h4 className="text-sm font-semibold text-[var(--text-primary)]">
+                          {testimonial.name}
+                        </h4>
+                        <p
+                          className="text-[11px] mt-0.5"
+                          style={{ color: 'var(--text-secondary)' }}
+                        >
+                          {testimonial.role} at {testimonial.company}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Stars */}
+                    <div className="flex items-center gap-0.5 pt-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className="w-3.5 h-3.5 fill-amber-500 text-amber-500"
+                        />
+                      ))}
                     </div>
                   </div>
 
-                  {/* Stars */}
-                  <div className="flex items-center gap-0.5">
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className="w-3.5 h-3.5 fill-amber-500 text-amber-500"
-                      />
-                    ))}
-                  </div>
-                </CardHeader>
+                  {/* Quote */}
+                  <p className="text-sm leading-relaxed text-[var(--text-secondary)] italic pt-1">
+                    &ldquo;{testimonial.quote}&rdquo;
+                  </p>
+                </div>
 
-                <CardContent className="p-6 flex-1 text-sm italic leading-relaxed text-[var(--text-secondary)]">
-                  &ldquo;{testimonial.quote}&rdquo;
-                </CardContent>
-
-                <CardFooter
-                  className="p-6 pt-0 border-t border-[var(--border)]/30 mt-auto text-xs font-semibold"
-                  style={{ color: 'var(--indigo-text)' }}
-                >
-                  Outcome: {testimonial.metric}
-                </CardFooter>
-              </Card>
+                {/* Metric Outcome Badge */}
+                <div className="mt-6 pt-4 border-t border-[var(--border)]/40 flex items-center justify-between">
+                  <span className="text-[11px] text-[var(--text-muted)] uppercase tracking-wider font-mono">MEASURED IMPACT</span>
+                  <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-[var(--indigo-subtle)] border border-[var(--indigo)]/20" style={{ color: 'var(--indigo-text)' }}>
+                    {testimonial.metric}
+                  </span>
+                </div>
+              </div>
             </AnimatedSection>
           )
         })}

@@ -86,63 +86,64 @@ export default function Pricing() {
                 delay={index * 0.08}
                 className="h-full flex"
               >
-                <Card
-                  className={`glass-card flex flex-col relative w-full h-full transition-all duration-300 ${
+                <div
+                  className={`relative flex flex-col justify-between p-6 rounded-2xl transition-all duration-300 w-full h-full border ${
                     isPro
-                      ? 'border-2 border-[var(--indigo)] shadow-lg shadow-indigo-950/20'
-                      : 'border hover:border-[var(--border-hover)]'
+                      ? 'border-2 border-[var(--indigo)] shadow-lg shadow-indigo-950/20 scale-[1.02] lg:scale-105 z-10'
+                      : 'hover:border-[var(--border-hover)]'
                   }`}
                   style={{
                     backgroundColor: 'var(--surface)',
+                    borderColor: isPro ? 'var(--indigo)' : 'var(--border)',
                   }}
                 >
                   {/* Badge */}
                   {plan.badge && (
                     <span
-                      className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 text-[10px] font-bold uppercase tracking-wider py-1 px-3.5 rounded-full text-white"
+                      className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[10px] font-bold uppercase tracking-widest py-1 px-4 rounded-full text-white shadow-md z-20"
                       style={{ backgroundColor: 'var(--indigo)' }}
                     >
                       {plan.badge}
                     </span>
                   )}
 
-                  {/* Card Info Header */}
-                  <CardHeader className="p-6 pb-2 mt-2 space-y-2">
-                    <h3 className="text-xl font-bold text-[var(--text-primary)]">
-                      {plan.name}
-                    </h3>
-                    <p
-                      className="text-xs min-h-[32px] leading-relaxed"
-                      style={{ color: 'var(--text-secondary)' }}
-                    >
-                      {plan.description}
-                    </p>
-                  </CardHeader>
+                  <div className="space-y-6 flex-1 flex flex-col">
+                    {/* Card Info Header */}
+                    <div className="space-y-2">
+                      <h3 className="text-xl font-bold text-[var(--text-primary)]">
+                        {plan.name}
+                      </h3>
+                      <p
+                        className="text-xs min-h-[32px] leading-relaxed"
+                        style={{ color: 'var(--text-secondary)' }}
+                      >
+                        {plan.description}
+                      </p>
+                    </div>
 
-                  {/* Price info content */}
-                  <CardContent className="p-6 py-2 flex-1 flex flex-col gap-6">
-                    <div className="flex items-baseline gap-1.5 min-h-[44px]">
+                    {/* Price info content */}
+                    <div className="flex items-baseline gap-1">
                       <AnimatePresence mode="wait">
                         <motion.span
                           key={price}
-                          initial={{ opacity: 0, y: -8 }}
+                          initial={{ opacity: 0, y: -6 }}
                           animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: 8 }}
+                          exit={{ opacity: 0, y: 6 }}
                           transition={{ duration: 0.15 }}
-                          className="text-4xl font-extrabold text-[var(--text-primary)] font-mono"
+                          className="text-5xl font-black font-mono text-[var(--text-primary)]"
                         >
                           ${price}
                         </motion.span>
                       </AnimatePresence>
                       <span
-                        className="text-xs"
+                        className="text-xs ml-1"
                         style={{ color: 'var(--text-secondary)' }}
                       >
-                        per seat/month
+                        / seat / month
                       </span>
                     </div>
 
-                    <Separator style={{ backgroundColor: 'var(--border)' }} />
+                    <div className="h-[1px] w-full bg-[var(--border)]" />
 
                     {/* Features checklist */}
                     <ul className="space-y-4 flex-1">
@@ -175,23 +176,23 @@ export default function Pricing() {
                         </li>
                       ))}
                     </ul>
-                  </CardContent>
+                  </div>
 
                   {/* Action card button */}
-                  <CardFooter className="p-6 mt-auto">
+                  <div className="mt-6 pt-6 border-t border-[var(--border)]/40">
                     <Button
                       onClick={handleScrollToDemo}
                       variant={plan.ctaVariant}
-                      className={`w-full py-2.5 text-xs font-semibold cursor-pointer ${
+                      className={`w-full py-2.5 text-xs font-semibold cursor-pointer transition-all duration-200 ${
                         isPro
-                          ? 'bg-[var(--indigo)] text-white hover:opacity-90'
-                          : 'border-[var(--border)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-2)]'
+                          ? 'bg-[var(--indigo)] text-white hover:bg-[var(--indigo)]/90 shadow-sm shadow-indigo-950/20'
+                          : 'border border-[var(--border)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-2)]'
                       }`}
                     >
                       {plan.cta}
                     </Button>
-                  </CardFooter>
-                </Card>
+                  </div>
+                </div>
               </AnimatedSection>
             )
           })}
