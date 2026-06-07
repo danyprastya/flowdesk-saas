@@ -81,13 +81,3 @@ npm start
 │   ├── constants/          # Static layout texts and feature descriptions
 │   └── hooks/              # Custom React hooks (scroll tracking, layout utilities)
 ```
-
----
-
-## 🤖 Agent-Assisted Development
-
-This repository contains instruction sets optimized for AI coding assistants:
-* **`AGENTS.md`**: Provides contextual guardrails, rules, and documentation pointers for Next.js and Tailwind API conventions.
-* **`CLAUDE.md`**: References rules in `AGENTS.md` for models that parse `CLAUDE.md` on startup.
-
-If you are using an AI agent to edit this repository, it will automatically consume these guidelines to ensure code compatibility and style consistency.
