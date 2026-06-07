@@ -126,15 +126,17 @@ export default function Navbar() {
         {/* Mobile menu trigger */}
         <div className="md:hidden">
           <Sheet open={isMobileOpen} onOpenChange={setIsMobileOpen}>
-            <SheetTrigger asChild>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="text-[var(--text-primary)]"
-                aria-label="Toggle menu"
-              >
-                <Menu className="w-6 h-6" />
-              </Button>
+            <SheetTrigger
+              render={
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="text-[var(--text-primary)]"
+                  aria-label="Toggle menu"
+                />
+              }
+            >
+              <Menu className="w-6 h-6" />
             </SheetTrigger>
             <SheetContent
               side="right"
