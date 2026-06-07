@@ -34,9 +34,15 @@ export default function Hero() {
     >
       {/* Subtle background radial glow */}
       <div
-        className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full blur-[120px] pointer-events-none opacity-20"
+        className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full blur-[130px] pointer-events-none opacity-25"
         style={{
           background: 'radial-gradient(circle, var(--indigo) 0%, transparent 70%)',
+        }}
+      />
+      <div
+        className="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 w-[500px] h-[500px] rounded-full blur-[120px] pointer-events-none opacity-15"
+        style={{
+          background: 'radial-gradient(circle, var(--green) 0%, transparent 70%)',
         }}
       />
 

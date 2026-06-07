@@ -9,20 +9,20 @@
    ═══════════════════════════════════════════════════════════ */
 :root {
   /* Backgrounds */
-  --bg: #0C0F19;
-  --surface: #141A29;
-  --surface-2: #1F273D;
-  --surface-3: #2A3452;
+  --bg: #0F1322;
+  --surface: #1B2032;
+  --surface-2: #262D44;
+  --surface-3: #323A55;
 
   /* Borders */
-  --border: #2D3958;
-  --border-hover: #41517D;
+  --border: #333C5D;
+  --border-hover: #4E5A87;
   --border-focus: #6366F1;
 
   /* Brand */
   --indigo: #6366F1;
-  --indigo-hover: #818CF8;
-  --indigo-subtle: #1E1B4B;
+  --indigo-hover: #8B93FA;
+  --indigo-subtle: #1D1C57;
   --indigo-text: #A5B4FC;
 
   /* Semantic */

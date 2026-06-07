@@ -48,14 +48,14 @@ export default function Features() {
               direction="up"
               delay={index * 0.08}
             >
-              <Card
-                className="glass-card hover:border-[var(--border-hover)] transition-all duration-300 group select-none relative h-full flex flex-col"
+              <div
+                className="relative flex flex-col justify-between p-6 rounded-2xl border transition-all duration-300 hover:border-[var(--indigo)] hover:shadow-[0_0_20px_rgba(99,102,241,0.06)] group h-full"
                 style={{
                   backgroundColor: 'var(--surface)',
                   borderColor: 'var(--border)',
                 }}
               >
-                <CardHeader className="p-6 flex-1 space-y-4">
+                <div className="space-y-4">
                   {/* Icon wrapper */}
                   <div
                     className="w-10 h-10 rounded-lg flex items-center justify-center transition-colors duration-300"
@@ -70,19 +70,19 @@ export default function Features() {
                   </div>
 
                   {/* Title */}
-                  <CardTitle className="text-lg font-semibold text-[var(--text-primary)]">
+                  <h3 className="text-lg font-semibold text-[var(--text-primary)]">
                     {feature.title}
-                  </CardTitle>
+                  </h3>
 
                   {/* Description */}
-                  <CardDescription
+                  <p
                     className="text-sm leading-relaxed"
                     style={{ color: 'var(--text-secondary)' }}
                   >
                     {feature.description}
-                  </CardDescription>
-                </CardHeader>
-              </Card>
+                  </p>
+                </div>
+              </div>
             </AnimatedSection>
           )
         })}
