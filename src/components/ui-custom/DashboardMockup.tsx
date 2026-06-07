@@ -91,14 +91,15 @@ export default function DashboardMockup() {
                   </p>
                 </div>
                 {/* Avatars */}
+                {/* Avatars */}
                 <div className="flex -space-x-2">
-                  <span className="w-6 h-6 rounded-full border border-[var(--surface)] bg-indigo-900 text-[9px] font-semibold flex items-center justify-center text-indigo-200">
+                  <span className="w-6 h-6 rounded-full border border-[var(--surface)] bg-indigo-100 text-[9px] font-semibold flex items-center justify-center text-indigo-700">
                     JD
                   </span>
-                  <span className="w-6 h-6 rounded-full border border-[var(--surface)] bg-emerald-900 text-[9px] font-semibold flex items-center justify-center text-emerald-200">
+                  <span className="w-6 h-6 rounded-full border border-[var(--surface)] bg-emerald-100 text-[9px] font-semibold flex items-center justify-center text-emerald-700">
                     AL
                   </span>
-                  <span className="w-6 h-6 rounded-full border border-[var(--surface)] bg-amber-900 text-[9px] font-semibold flex items-center justify-center text-amber-200">
+                  <span className="w-6 h-6 rounded-full border border-[var(--surface)] bg-amber-100 text-[9px] font-semibold flex items-center justify-center text-amber-700">
                     TH
                   </span>
                 </div>
@@ -193,7 +194,7 @@ export default function DashboardMockup() {
                   <div className="flex items-center gap-2">
                     <span className="w-3.5 h-3.5 rounded border" />
                     <span className="text-[11px] text-[var(--text-secondary)]">
-                      Design dark-mode landing page assets
+                      Design light-mode landing page assets
                     </span>
                   </div>
                   <span className="text-[9px] px-1.5 py-0.5 rounded bg-[var(--green-subtle)] text-[var(--green)]">

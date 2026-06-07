@@ -89,7 +89,7 @@ export default function Pricing() {
                 <div
                   className={`relative flex flex-col justify-between p-6 rounded-2xl transition-all duration-300 w-full h-full border ${
                     isPro
-                      ? 'border-2 border-[var(--indigo)] shadow-lg shadow-indigo-950/20 scale-[1.02] lg:scale-105 z-10'
+                      ? 'border-2 border-[var(--indigo)] shadow-xl shadow-indigo-100 scale-[1.02] lg:scale-105 z-10'
                       : 'hover:border-[var(--border-hover)]'
                   }`}
                   style={{
@@ -185,7 +185,7 @@ export default function Pricing() {
                       variant={plan.ctaVariant}
                       className={`w-full py-2.5 text-xs font-semibold cursor-pointer transition-all duration-200 ${
                         isPro
-                          ? 'bg-[var(--indigo)] text-white hover:bg-[var(--indigo)]/90 shadow-sm shadow-indigo-950/20'
+                          ? 'bg-[var(--indigo)] text-white hover:bg-[var(--indigo)]/90 shadow-sm shadow-indigo-100'
                           : 'border border-[var(--border)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-2)]'
                       }`}
                     >

@@ -127,9 +127,9 @@ export default function HowItWorks() {
                   {index === 1 && (
                     // Step 2: AI sorting — mini task list sorting mockup
                     <div
-                      className="w-44 border rounded-xl p-2 shadow-lg relative overflow-hidden"
+                      className="w-44 border rounded-xl p-2 shadow-sm relative overflow-hidden"
                       style={{
-                        backgroundColor: 'var(--surface-3)',
+                        backgroundColor: 'var(--surface)',
                         borderColor: 'var(--border)',
                       }}
                     >
@@ -140,7 +140,7 @@ export default function HowItWorks() {
                       <div className="flex items-center justify-between p-1.5 rounded bg-[var(--surface-2)]/60 border border-[var(--border)]/80 mb-1.5">
                         <div className="flex items-center gap-1.5">
                           <span className="w-1.5 h-1.5 rounded-full bg-[var(--red)]" />
-                          <span className="w-16 h-1.5 rounded bg-neutral-600" />
+                          <span className="w-16 h-1.5 rounded bg-slate-200" />
                         </div>
                         <span className="text-[7px] px-1 py-0.2 rounded bg-[var(--red-subtle)] text-[var(--red)] font-semibold font-mono">P0</span>
                       </div>
@@ -149,7 +149,7 @@ export default function HowItWorks() {
                       <div className="flex items-center justify-between p-1.5 rounded bg-[var(--surface-2)]/60 border border-[var(--border)]/80">
                         <div className="flex items-center gap-1.5">
                           <span className="w-1.5 h-1.5 rounded-full bg-[var(--green)]" />
-                          <span className="w-20 h-1.5 rounded bg-neutral-600" />
+                          <span className="w-20 h-1.5 rounded bg-slate-200" />
                         </div>
                         <span className="text-[7px] px-1 py-0.2 rounded bg-[var(--green-subtle)] text-[var(--green)] font-semibold font-mono">P2</span>
                       </div>
@@ -159,9 +159,9 @@ export default function HowItWorks() {
                   {index === 2 && (
                     // Step 3: Ship faster — Sparkline chart
                     <div
-                      className="w-40 border rounded-xl p-2 shadow-lg flex flex-col gap-1"
+                      className="w-40 border rounded-xl p-2 shadow-sm flex flex-col gap-1"
                       style={{
-                        backgroundColor: 'var(--surface-3)',
+                        backgroundColor: 'var(--surface)',
                         borderColor: 'var(--border)',
                       }}
                     >

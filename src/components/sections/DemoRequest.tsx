@@ -271,7 +271,7 @@ export default function DemoRequest() {
                   {/* Error Box */}
                   {formState === 'error' && errorMessage && (
                     <div
-                      className="p-3 rounded-lg border flex items-start gap-2.5 text-xs bg-red-950/20"
+                      className="p-3 rounded-lg border flex items-start gap-2.5 text-xs bg-[var(--red-subtle)]"
                       style={{ borderColor: 'var(--red)' }}
                     >
                       <AlertCircle
