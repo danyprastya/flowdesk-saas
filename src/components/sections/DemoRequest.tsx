@@ -130,7 +130,7 @@ export default function DemoRequest() {
                   className="space-y-6 glass-card p-6 sm:p-8"
                   style={{
                     backgroundColor: 'var(--surface)',
-                    borderColor: 'var(--border)',
+                    borderColor: 'var(--card-border)',
                   }}
                 >
                   {/* Name + Email Row */}
@@ -316,7 +316,7 @@ export default function DemoRequest() {
             className="glass-card"
             style={{
               backgroundColor: 'var(--surface)',
-              borderColor: 'var(--border)',
+              borderColor: 'var(--card-border)',
             }}
           >
             <CardContent className="p-6 space-y-6">
@@ -394,7 +394,7 @@ export default function DemoRequest() {
               className="p-3 border rounded-xl flex flex-col items-center justify-center text-center gap-1.5 premium-shadow"
               style={{
                 backgroundColor: 'var(--surface)',
-                borderColor: 'var(--border)',
+                borderColor: 'var(--card-border)',
               }}
             >
               <Shield className="w-4 h-4" style={{ color: 'var(--indigo)' }} />
@@ -409,7 +409,7 @@ export default function DemoRequest() {
               className="p-3 border rounded-xl flex flex-col items-center justify-center text-center gap-1.5 premium-shadow"
               style={{
                 backgroundColor: 'var(--surface)',
-                borderColor: 'var(--border)',
+                borderColor: 'var(--card-border)',
               }}
             >
               <Globe className="w-4 h-4" style={{ color: 'var(--indigo)' }} />
@@ -424,7 +424,7 @@ export default function DemoRequest() {
               className="p-3 border rounded-xl flex flex-col items-center justify-center text-center gap-1.5 premium-shadow"
               style={{
                 backgroundColor: 'var(--surface)',
-                borderColor: 'var(--border)',
+                borderColor: 'var(--card-border)',
               }}
             >
               <Activity className="w-4 h-4" style={{ color: 'var(--indigo)' }} />

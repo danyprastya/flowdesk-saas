@@ -94,7 +94,7 @@ export default function Pricing() {
                   }`}
                   style={{
                     backgroundColor: 'var(--surface)',
-                    borderColor: isPro ? 'var(--indigo)' : 'var(--border)',
+                    borderColor: isPro ? 'var(--indigo)' : 'var(--card-border)',
                   }}
                 >
                   {/* Badge */}

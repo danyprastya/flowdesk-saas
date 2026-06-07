@@ -52,7 +52,7 @@ export default function Features() {
                 className="relative flex flex-col justify-between p-6 rounded-2xl border transition-all duration-300 hover:border-[var(--indigo)] premium-shadow group h-full"
                 style={{
                   backgroundColor: 'var(--surface)',
-                  borderColor: 'var(--border)',
+                  borderColor: 'var(--card-border)',
                 }}
               >
                 <div className="space-y-4">

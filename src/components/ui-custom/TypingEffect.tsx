@@ -29,7 +29,7 @@ export default function TypingEffect({
         className="ml-1 inline-block w-[3px] h-[1.2em] bg-current animate-cursor-blink font-mono"
         aria-hidden="true"
       >
-        |
+        
       </span>
     </span>
   )

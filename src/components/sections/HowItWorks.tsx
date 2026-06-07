@@ -52,7 +52,7 @@ export default function HowItWorks() {
                 className="relative flex flex-col items-center text-center space-y-5 group px-4 py-6 rounded-2xl border premium-shadow transition-all duration-300 hover:border-[var(--indigo)]"
                 style={{
                   backgroundColor: 'var(--surface)',
-                  borderColor: 'var(--border)',
+                  borderColor: 'var(--card-border)',
                 }}
               >
                 {/* Step circle & Icon */}

@@ -50,18 +50,7 @@ export default function Hero() {
         {/* Left Column (55% width on large desktop) */}
         <div className="lg:col-span-7 flex flex-col items-start text-left space-y-6">
           <AnimatedSection direction="up" delay={0} className="space-y-6">
-            {/* Custom badge */}
-            <Badge
-              variant="outline"
-              className="px-3.5 py-1 text-xs font-semibold tracking-wide uppercase border-[var(--indigo-subtle)]"
-              style={{
-                color: 'var(--indigo-text)',
-                backgroundColor: 'var(--indigo-subtle)',
-              }}
-            >
-              {HERO.badge}
-            </Badge>
-
+            
             {/* Headline */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[var(--text-primary)] leading-[1.08] whitespace-pre-line">
               {HERO.headline}
